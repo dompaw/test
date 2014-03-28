@@ -32,3 +32,5 @@ y = dane(1:749,1);
 pp = spline(x,y);
 yy = ppval(pp, linspace(0,2*pi,101));
 plot(yy(1,:),yy(2,:),'-b',y(1,2:5),y(2,2:5),'or'), axis equal
+
+% ostatnia linijka jako cos nowego
