@@ -24,4 +24,6 @@ figure(1)
 plot(xx,ppval(yy,xx), '.')
 hold on
 
+%dopisalam linijke komentarza
+
 end
