@@ -42,16 +42,7 @@ end
 % plotowanie zakresow jako linie
 % plot(xx, zbiorczo(:,1),'b-',xx,zbiorczo(:,2),'b-',xx,zbiorczo(:,3), 'r-')
 
-% zape³nianie pomiêdzy liniami
-% % bardzo nieelegancko
-% bar(xx, zbiorczo(:,2), 1,'b', 'edgecolor','b')
-% hold on
-% bar(xx, zbiorczo(:,1), 1,'w','edgecolor', 'w')
-% plot(xx, zbiorczo(:,3), 'r', 'linewidth', 3)
-% axis([0 100 0 100])
-
-% z filem jest k³opot
-fill( [xx' fliplr(xx')],  [zbiorczo(1:end-1,2) zbiorczo(end,1) fliplr(zbiorczo(1:end-1,1)) zbiorczo(1,2)], 'k');
+fill( [xx fliplr(xx)],  [zbiorczo(:,2)' fliplr(zbiorczo(:,1)')], 'k');
 alpha(.25); hold on
 plot(xx,zbiorczo(:,3) , 'k', 'LineWidth', 2)
 plot(xx, zbiorczo(:,2), 'k')
