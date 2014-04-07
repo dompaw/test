@@ -50,3 +50,10 @@ end
 % plot(xx, zbiorczo(:,3), 'r', 'linewidth', 3)
 % axis([0 100 0 100])
 
+% z filem jest k³opot
+fill( [xx' fliplr(xx')],  [zbiorczo(1:end-1,2) zbiorczo(end,1) fliplr(zbiorczo(1:end-1,1)) zbiorczo(1,2)], 'k');
+alpha(.25); hold on
+plot(xx,zbiorczo(:,3) , 'k', 'LineWidth', 2)
+plot(xx, zbiorczo(:,2), 'k')
+plot(xx, zbiorczo(:,1), 'k')
+
