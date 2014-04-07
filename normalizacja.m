@@ -40,6 +40,13 @@ for i =1:1500
     zbiorczo(i,3) = mean(Y(i,:));   % œrednia
 end
 % plotowanie zakresow jako linie
-plot(xx, zbiorczo(:,1),'b-',xx,zbiorczo(:,2),'b-',xx,zbiorczo(:,3), 'r-')
+% plot(xx, zbiorczo(:,1),'b-',xx,zbiorczo(:,2),'b-',xx,zbiorczo(:,3), 'r-')
 
+% zape³nianie pomiêdzy liniami
+% % bardzo nieelegancko
+% bar(xx, zbiorczo(:,2), 1,'b', 'edgecolor','b')
+% hold on
+% bar(xx, zbiorczo(:,1), 1,'w','edgecolor', 'w')
+% plot(xx, zbiorczo(:,3), 'r', 'linewidth', 3)
+% axis([0 100 0 100])
 
