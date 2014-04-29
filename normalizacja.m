@@ -5,8 +5,8 @@ clc, close all, clear all;
 % wczytanie z *.xlsx; 
 
 % wczytuje nazwy plików
-A = dir(['dane' '\' '*.xlsx']);
-cd('dane')
+A = dir(['dane_lewa' '\' '*.xlsx']);
+cd('dane_lewa')
 for i=1:length(A)
 % do zmiennej dane wczytuje plik z danymi
 dane = xlsread(A(i).name);
@@ -18,7 +18,7 @@ end
 
 % kolumna D (4) to k¹ty, kolumna L(12) to czas w %
 czas = dane(:,13);
-katy = dane(:,4);
+katy = dane(:,8);
 
 % interpolka sklejanymi
 yy = spline(czas, katy);
@@ -47,4 +47,5 @@ alpha(.25); hold on
 plot(xx,zbiorczo(:,3) , 'k', 'LineWidth', 2)
 plot(xx, zbiorczo(:,2), 'k')
 plot(xx, zbiorczo(:,1), 'k')
-
+xlabel('czas [%]')
+ylabel('k¹t [stopnie]')
